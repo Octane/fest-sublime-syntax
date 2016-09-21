@@ -2,7 +2,7 @@
 Sublime Text 3 syntax highlighting for [Fest template language](https://github.com/mailru/fest)
 
 ## Features
-1. Supports syntax highlighting for JavaScript within `<fest:script>`, '<fest:value>' and '<fest:get>'
+1. Supports syntax highlighting for JavaScript within `<fest:script>`, `<fest:value>` and `<fest:get>`
 2. Adds fest tags to list of code completion suggestions
 
 ## Installation
