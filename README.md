@@ -7,18 +7,18 @@ Sublime Text 3 syntax highlighting for [Fest template language](https://github.c
 
 ## Installation
 
-1. Clone this repo into your Sublime Packages folder
+ - Clone this repo into your Sublime Packages folder
 ```bash
-$ cd ~/Library/Application Support/Sublime Text 3/Packages/
-git clone https://github.com/Octane/fest-sublime-syntax.git Fest
+$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+$ git clone https://github.com/Octane/fest-sublime-syntax.git Fest
 ```
-2. Open a fest template
-3. Select `View` from the menu, then `Syntax` → `Fest`
+ - Open a fest template
+ - Select `View` from the menu, then `Syntax` → `Fest`
 
 ## Updating
 ```bash
-$ cd ~/Library/Application Support/Sublime Text 3/Packages/Fest
-git remote update && git pull
+$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Fest/
+$ git remote update && git pull
 ```
 
 ## Contributing

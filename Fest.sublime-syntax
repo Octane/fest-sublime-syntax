@@ -82,12 +82,12 @@ contexts:
           with_prototype:
             - match: (?i)(?=</style)
               pop: true
-    - match: '(<)((?i:script)|(?i:fest:script)|(?i:fest:value)|(?i:fest:get))\b(?![^>]*/>)(?![^>]*(?i:type.?=.?text/((?!javascript).*)))'
+    - match: '(<)((?i:script)|(?i:fest:script)|(?i:fest:params)|(?i:fest:value)|(?i:fest:get))\b(?![^>]*/>)(?![^>]*(?i:type.?=.?text/((?!javascript).*)))'
       captures:
         1: punctuation.definition.tag.begin.html
         2: entity.name.tag.script.html
       push:
-        - match: (?i)(</)(script|fest:script|fest:value|fest:get)(>)
+        - match: (?i)(</)(script|fest:script|fest:params|fest:value|fest:get)(>)
           captures:
             1: punctuation.definition.tag.begin.html
             2: entity.name.tag.html
@@ -100,7 +100,7 @@ contexts:
             - meta_content_scope: source.js.embedded.html
             - include: 'scope:source.js'
           with_prototype:
-             - match: (?i)(?=</(script|fest:script|fest:value|fest:get))
+             - match: (?i)(?=</(script|fest:script|fest:params|fest:value|fest:get))
                pop: true
     - match: (</?)((?i:body|head|html)\b)
       captures:
@@ -112,7 +112,7 @@ contexts:
           scope: punctuation.definition.tag.end.html
           pop: true
         - include: tag-stuff
-    - match: (</?)((?i:address|blockquote|dd|div|section|article|aside|header|footer|nav|menu|dl|dt|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|pre|fest:template|fest:set|fest:get|fest:element|fest:attributes|fest:each|fest:for|fest:if|fest:choose|fest:otherwise|fest:when|fest:cdata|fest:script|fest:var|fest:value|fest:text|fest:comment|fest:attribute|fest:message|fest:msg|fest:plural|fest:space|fest:doctype|fest:include|fest:insert)\b)
+    - match: (</?)((?i:address|blockquote|dd|div|section|article|aside|header|footer|nav|menu|dl|dt|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|pre|fest:template|fest:set|fest:get|fest:element|fest:attributes|fest:each|fest:for|fest:if|fest:choose|fest:otherwise|fest:when|fest:cdata|fest:script|fest:params|fest:param|fest:var|fest:value|fest:text|fest:comment|fest:attribute|fest:message|fest:msg|fest:plural|fest:space|fest:doctype|fest:include|fest:insert)\b)
       captures:
         1: punctuation.definition.tag.begin.html
         2: entity.name.tag.block.any.html

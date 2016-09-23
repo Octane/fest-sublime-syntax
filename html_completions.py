@@ -48,6 +48,8 @@ def get_tag_to_attributes():
         'fest:message': ['context'],
         'fest:msg': ['context'],
         'fest:plural': ['select'],
+        'fest:params': [],
+        'fest:param': ['name'],
 
         'i18n:msg': ['context', 'data-name'],
 
@@ -301,7 +303,7 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'thead', 'time', 'title', 'tr', 'tt', 'u', 'ul', 'var',
             'video',
 
-            'fest:template', 'fest:var', 'fest:value', 'fest:text', 'fest:space', 'fest:set', 'fest:get', 'fest:element', 'fest:attributes', 'fest:attribute', 'fest:each', 'fest:for', 'fest:if', 'fest:choose', 'fest:otherwise', 'fest:when', 'fest:cdata', 'fest:comment', 'fest:doctype', 'fest:script', 'fest:include', 'fest:insert', 'fest:message', 'fest:msg', 'fest:plural',
+            'fest:template', 'fest:var', 'fest:value', 'fest:text', 'fest:space', 'fest:set', 'fest:get', 'fest:element', 'fest:attributes', 'fest:attribute', 'fest:each', 'fest:for', 'fest:if', 'fest:choose', 'fest:otherwise', 'fest:when', 'fest:cdata', 'fest:comment', 'fest:doctype', 'fest:script', 'fest:include', 'fest:insert', 'fest:message', 'fest:msg', 'fest:plural', 'fest:params', 'fest:param'
             'i18n:msg'
         ])
 
@@ -336,6 +338,8 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             ('fmsg\tTag', 'fest:msg context=\"$1\">$0</fest:msg>'),
             ('fplural\tTag', 'fest:plural select=\"$1\">%s $2|%s $3|%s $0</fest:plural>'),
             ('i18n\tTag', 'i18n:msg context=\"$1\" data-name=\"$2\">$0</i18n:msg>'),
+            ('fparams\tTag', 'fest:params>\n\t{\n\t\t$0\n\t}\n</fest:params>'),
+            ('fparam\tTag', 'fest:param name=\"$1\">\n\t$0\n</fest:param>'),
 
             ('a\tTag', 'a href=\"$1\">$0</a>'),
             ('area\tTag', 'area shape=\"$1\" coords=\"$2\" href=\"$3\">'),
